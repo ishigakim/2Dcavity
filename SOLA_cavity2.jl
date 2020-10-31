@@ -137,9 +137,9 @@ function restart(para, restartFile, x, y, u, v, pa, nstart)
     end
     
     file = h5open(restartFile, "r") 
-    u = read(file, "u_latest")
-    v = read(file, "v_latest")
-    pa = read(file, "pa_latest")
+    u .= read(file, "u_latest")
+    v .= read(file, "v_latest")
+    pa .= read(file, "pa_latest")
     nstart = read(file, "n")
     
     return nstart
